@@ -6,13 +6,13 @@ import Menu from './components/Menu';
 import Categories from './components/Categories';
 import menuItemsJSON from './utils/meals-api';
 
-const AllMenuCategory = ['all'];
+const AllMenuCategory = ["all"];
 const ExistingMenuCategories = new Set(menuItemsJSON.map((item) => {
   return (
     item.category
   )
 }));
-const AllMenuCategories = [AllMenuCategory.toString(), ...ExistingMenuCategories]
+const AllMenuCategories = [...AllMenuCategory, ...ExistingMenuCategories]
 
 console.log(AllMenuCategories);
 
