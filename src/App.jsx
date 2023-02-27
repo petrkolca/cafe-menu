@@ -4,11 +4,11 @@ import { GlobalStyles } from './components/styles/GlobalStyles'
 // components
 import Menu from './components/Menu';
 import Categories from './components/Categories';
-import menuItems from './utils/meals-api';
+import menuItemsJSON from './utils/meals-api';
 
 
 function App() {
-
+  const [menuItems, setMenuItems] = useState(menuItemsJSON);
 
   return (
     <Fragment>
@@ -20,7 +20,7 @@ function App() {
             <div className="underline"></div>
           </div>
           <Categories />
-          <Menu />
+          <Menu items={menuItems} />
         </section>
       </main>
     </Fragment>
