@@ -1,10 +1,14 @@
-import { Fragment, useState } from 'react'
-import reactLogo from './assets/react.svg'
-
+import React, { Fragment, useState } from 'react'
 import { GlobalStyles } from './components/styles/GlobalStyles'
 
+// components
+import Menu from './components/Menu';
+import Categories from './components/Categories';
+import menuItems from './utils/meals-api';
+
+
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <Fragment>
