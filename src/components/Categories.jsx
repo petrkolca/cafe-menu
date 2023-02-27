@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Categories = () => {
+import { StyledFilterCnt } from './styles/Filter.styled.jsx'
+
+const Categories = ({filterItems}) => {
+
     return (
-        <div>
-            <h2>categories component</h2>
-        </div>
+        <StyledFilterCnt>
+            <button className="filter-btn">Btn Label</button>
+        </StyledFilterCnt>
     );
 }
 
