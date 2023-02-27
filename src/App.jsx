@@ -9,6 +9,18 @@ import menuItemsJSON from './utils/meals-api';
 
 function App() {
   const [menuItems, setMenuItems] = useState(menuItemsJSON);
+  const [categories, setcategories] = useState([]);
+
+  const filterItems = (category) => {
+    const newItems = menuItemsJSON.filter((item) => {
+      return (
+        // return items matching passed category parameter
+        item.category === category
+      )
+    });
+
+    setMenuItems(newItems);
+  }
 
   return (
     <Fragment>
@@ -19,7 +31,7 @@ function App() {
             <h2>Our menu</h2>
             <div className="underline"></div>
           </div>
-          <Categories />
+          <Categories filterItems={filterItems} />
           <Menu items={menuItems} />
         </section>
       </main>
