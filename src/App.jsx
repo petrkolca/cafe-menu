@@ -6,6 +6,15 @@ import Menu from './components/Menu';
 import Categories from './components/Categories';
 import menuItemsJSON from './utils/meals-api';
 
+const AllMenuCategory = ['all'];
+const ExistingMenuCategories = new Set(menuItemsJSON.map((item) => {
+  return (
+    item.category
+  )
+}));
+const AllMenuCategories = [AllMenuCategory.toString(), ...ExistingMenuCategories]
+
+console.log(AllMenuCategories);
 
 function App() {
   const [menuItems, setMenuItems] = useState(menuItemsJSON);
@@ -36,7 +45,7 @@ function App() {
             <h2>Our menu</h2>
             <div className="underline"></div>
           </div>
-          <Categories filterItems={filterItems} />
+          <Categories filterItems={filterItems} allCategories={AllMenuCategories} />
           <Menu items={menuItems} />
         </section>
       </main>
