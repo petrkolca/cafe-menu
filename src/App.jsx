@@ -8,16 +8,21 @@ import menuItems from './utils/meals-api';
 
 
 function App() {
-  
+
 
   return (
     <Fragment>
       <GlobalStyles />
-      <div className="App">
-        <h1>Food Menu</h1>
-        <Categories />
-        <Menu />
-      </div>
+      <main>
+        <section className="menu section">
+          <div className="title">
+            <h2>Our menu</h2>
+            <div className="underline"></div>
+          </div>
+          <Categories />
+          <Menu />
+        </section>
+      </main>
     </Fragment>
   )
 }
