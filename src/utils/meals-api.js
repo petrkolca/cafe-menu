@@ -73,5 +73,5 @@ const menuItems = [
     },
 ];
 
-export default menu;
+export default menuItems;
   

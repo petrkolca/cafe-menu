@@ -15,6 +15,8 @@ function App() {
       <GlobalStyles />
       <div className="App">
         <h1>Food Menu</h1>
+        <Categories />
+        <Menu />
       </div>
     </Fragment>
   )
