@@ -4,15 +4,18 @@ import { StyledFilterCnt } from './styles/Filter.styled.jsx'
 
 const Categories = ({filterItems}) => {
 
-    const filterAction = () => {
-        filterItems('breakfast')
-    };
 
     return (
         <StyledFilterCnt>
             <button 
                 className="filter-btn"
-                onClick={filterAction}
+                onClick={ () => filterItems('all')}
+            >
+                All
+            </button>
+            <button 
+                className="filter-btn"
+                onClick={ () => filterItems('breakfast')}
             >
                 Breakfast
             </button>

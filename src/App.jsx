@@ -9,9 +9,14 @@ import menuItemsJSON from './utils/meals-api';
 
 function App() {
   const [menuItems, setMenuItems] = useState(menuItemsJSON);
-  const [categories, setcategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const filterItems = (category) => {
+    if(category === 'all') {
+      setMenuItems(menuItemsJSON)
+      return;
+    }
+
     const newItems = menuItemsJSON.filter((item) => {
       return (
         // return items matching passed category parameter
